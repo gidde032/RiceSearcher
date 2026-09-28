@@ -1,5 +1,9 @@
 # Security & responsible-use notes
 
+**No version of this repository is supported.** Report vulnerabilities on
+[RiceSuite](https://github.com/gidde032/RiceSuite/issues) instead. Do not post
+secrets or exploit details in a public Issue.
+
 RiceSearcher is a **local-first** content-sourcing tool. It runs on your own
 machine, reads source media, and writes local files. It has a hard, code-level
 safety boundary and some responsible-use expectations for anyone running it.

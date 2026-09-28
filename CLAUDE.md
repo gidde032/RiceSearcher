@@ -1,5 +1,8 @@
 # RiceSearcher — Operating Rules
 
+**This repository is archived. Do no work here.** Work happens in RiceSuite's
+`searcher/` pillar: https://github.com/gidde032/RiceSuite.
+
 Content-sourcing pillar of the Rice harness. Discovery (on-demand pull) +
 extraction (transcript-driven *time*/trim) → scored candidate slices in a
 moment-deduplicated local library → exact reviewed-window handoff to RiceClipper.
@@ -27,11 +30,10 @@ Siblings: `../RiceClipper` (render), `../RicePoster` (posting).
 3. `ADR-001.md` — the three-pillar boundary (Q1–Q5).
 4. `ROADMAP.md` — future sequencing (links every actionable entry to an Issue).
 5. GitHub Issues (backlog) / milestones (committed scope) / PRs (delivery record).
-6. `handoff.md` — immediate current state only.
 
-Actionable planned work lives in **GitHub Issues**, not in `handoff.md`,
-`pending-lessons.md`, or a local `TASKS.md`. `TASKS.md` (if present) is gitignored
-and holds only the current session's execution steps.
+Actionable planned work lives in **GitHub Issues**, not in a local `TASKS.md`.
+`TASKS.md` (if present) is gitignored and holds only the current session's
+execution steps.
 
 ## Cross-repo integration (see `SPEC.md §7`)
 

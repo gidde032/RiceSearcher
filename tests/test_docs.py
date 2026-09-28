@@ -1,4 +1,4 @@
-"""Stable-documentation regressions (S4 README, S5 handoff dedup)."""
+"""Stable-documentation regressions (S4 README)."""
 
 from __future__ import annotations
 
@@ -22,11 +22,6 @@ def test_readme_documents_cli_commands() -> None:
 def test_readme_documents_runnable_smoke_command() -> None:
     readme = (_ROOT / "README.md").read_text()
     assert "pytest -m smoke --no-cov" in readme
-
-
-def test_handoff_has_single_reserved_section() -> None:
-    handoff = (_ROOT / "handoff.md").read_text()
-    assert handoff.count("## Reserved from the agent (maintainer-only)") == 1
 
 
 def test_readme_offline_network_claims_match_model_loading() -> None:
