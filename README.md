@@ -16,13 +16,15 @@ uploads content; local-first.** See [SPEC.md](SPEC.md) (decisions D1–D9) and
 RiceSuite runs RiceSearcher as its `searcher/` pillar. Install and run it per
 the [RiceSuite README](https://github.com/gidde032/RiceSuite#readme).
 
-RiceSuite uses your existing library in place. It keeps `RICESEARCHER_DATA_DIR`
-(default `~/.ricesearcher`) and the handoff directory defaults. Every variable
-keeps its name; set it in RiceSuite's `ricesuite.env` instead of
-`credentials.env`.
+RiceSuite finds an existing library at `~/.ricesearcher` and the handoff
+directories at their old defaults, and uses them in place. To move them under
+`~/.ricesuite`, follow the [data migration guide](https://github.com/gidde032/RiceSuite/blob/main/docs/data-migration.md). A fresh install uses
+`~/.ricesuite` from the start. Every variable keeps its name; set it in
+RiceSuite's `ricesuite.env` instead of `credentials.env`.
 
-Stop this app first. `rice` refuses to start while anything answers on the old
-ports (8765 / 8000 / 1738), because RiceSuite and this app share live data.
+Stop this app first. RiceSuite's `rice` command refuses to start while
+anything answers on this app's port or the other legacy ports (8765 / 8000 /
+1738). A legacy app started by mistake could otherwise write to the same data.
 
 ## How it works
 
