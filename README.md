@@ -1,15 +1,30 @@
 # RiceSearcher
 
+> **This repository is archived and no longer maintained.** RiceSearcher is now the `searcher/` pillar of [RiceSuite](https://github.com/gidde032/RiceSuite). All new work, fixes, and Issues go there. The code here is the final standalone version. It still runs, but it gets no fixes.
+
 Content-sourcing pillar of the Rice harness. On-demand pull discovery +
 transcript-driven extraction into a scored, moment-deduplicated candidate-slice
 library, handed off to RiceClipper for rendering. **Never posts, publishes, or
 uploads content; local-first.** See [SPEC.md](SPEC.md) (decisions D1–D9) and
 [ADR-001.md](ADR-001.md) (the three-pillar boundary).
 
-> Status: **v1.0.0 — phases 1–5 complete.** The complete RiceSearcher-side v1
-> flow is available: acquire/transcribe → score/dedup → review/select → handoff.
-> See [CHANGELOG.md](CHANGELOG.md) for release notes and [ROADMAP.md](ROADMAP.md)
-> for routed-forward work.
+> Status: final standalone version is v1.0.0 plus the untagged changes in
+> [CHANGELOG.md](CHANGELOG.md) [Unreleased]. Development continues in RiceSuite.
+
+## Move to RiceSuite
+
+RiceSuite runs RiceSearcher as its `searcher/` pillar. Install and run it per
+the [RiceSuite README](https://github.com/gidde032/RiceSuite#readme).
+
+RiceSuite finds an existing library at `~/.ricesearcher` and the handoff
+directories at their old defaults, and uses them in place. To move them under
+`~/.ricesuite`, follow the [data migration guide](https://github.com/gidde032/RiceSuite/blob/main/docs/data-migration.md). A fresh install uses
+`~/.ricesuite` from the start. Every variable keeps its name; set it in
+RiceSuite's `ricesuite.env` instead of `credentials.env`.
+
+Stop this app first. RiceSuite's `rice` command refuses to start while
+anything answers on this app's port or the other legacy ports (8765 / 8000 /
+1738). A legacy app started by mistake could otherwise write to the same data.
 
 ## How it works
 
@@ -291,6 +306,8 @@ exceptions are limited to the three optional heavy adapters. The tests use fakes
 for yt-dlp, Whisper, the scorer, and the embedder, so they need no network, API
 key, or model downloads. See [CLAUDE.md](CLAUDE.md) for the operating rules and
 hard safety boundary.
+
+Pull requests are closed here. Open them on RiceSuite instead.
 
 ## Security & responsible use
 

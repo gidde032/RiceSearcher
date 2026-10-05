@@ -3,6 +3,12 @@
 All notable changes to RiceSearcher are documented here. This project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## Deprecated
+
+This repository is frozen and archived. Development continues in RiceSuite's
+`searcher/` pillar. The items under [Unreleased] below were never tagged here;
+they ship only as part of RiceSuite.
+
 ## [Unreleased]
 
 ### Added
